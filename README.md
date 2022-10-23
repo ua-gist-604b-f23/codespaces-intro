@@ -9,9 +9,13 @@ Codespaces are Virtual Machines provided to GitHub users to interact with their 
 
 
 ## Directions
+### Watch class lecture
+0. If you haven't already, watch the associated lecture
 
+### Create a new branch
 1. Create a new branch named `assignment`.
 
+### Setup your codespace on that branch
 2. Click on the "Code" button and select "Codespaces" to open a drop-down menu with the normal `Local` (clone) tab and also a `Codespaces` tab. 
 
 Click on the `Codespaces` tab and then the big green button for `Create codespace on assignment`.
@@ -22,7 +26,74 @@ Note that this will create a new `Codespace` VM environment and associate it wit
 
 When you do, it will open another browser tab where your environment will be set up. You can interact with this environment through this browser tab. It will not live long if you are not working with it actively so it will be up to you to save any work you have before letting it go idle for too long. When it has finally loaded it will look like this:
 
-![](./media/codespace_created.png)
+![screenshot of running vscode workspace](./media/codespace_created.png)
 
 This environment is running [Microsoft Visual Studio Code](https://code.visualstudio.com/). This is an Integrated Development Environment, or IDE. It is [open sourced under the MIT license](https://github.com/microsoft/vscode). An IDE is a glorified text editor with built-in tools optimized for editing and interacting with programs. You may be familiar with another IDE, `PyCharm`, from another class.
+
+
+In the initial state of your codespace this is what you will see:
+
+- Explorer panel
+  - You will see an expandable browsable list of files from your repo's `assignment` branch.
+  - If you click on a file it will open in a new tab in the `Editor` panel.
+- Editor panel
+  - This automatically opens with the `README.md` file showing. It renders markdown but you can also look at the source.
+- Terminal panel
+  - The terminal panel is shared with a few other tabs, including `Problems`, `Output`, and `Debug Console`. The terminal is where you can type commands in your cloud workspace environment. It is a linux environment. 
+
+### Create and run a python program in your codespace on `assignment` branch
+
+3. Right click in the `Explorer` panel and select `New File`. Name the file `hello.py`.
+![screenshot of right click in explorer panel](./media/codespace-new-file.png)
+
+This will create a new file which will open as a new tab in your editor.
+
+VS Code is an IDE for many languages but each language may need its own extension for VS Code to be able to do syntax highlighting, code linting, or even running the code directly from the IDE. Fortunately, it will detect that your new file, since it ends in `.py`, is a python file and will prompt you to install the `Python` extension. This will be in the lower right hard corner of your workspace:
+
+![screenshot of installing python extension dialog](./media/codespace-python-extension.png)
+
+4. Install the python extension
+
+when you click on the `Install` button it will open a new tab in the `Editor` pane showing details for the extension. This page _also_ has an `Install` button. Go ahead and press that button to install the Python extension. When it has finished you can close this tab.
+
+![screenshot of closing the tab](./media/codespace-close-editor-extension.png]
+
+5. Create and run your first python program
+
+Add this single line to your `hello.py` file:
+
+```
+print('hello, GIST 604B')
+```
+
+Next, `Run` the file by clicking on the small triangle at the top right of the editor window and select `Run python file`
+
+![screenshot of the run python file dialog](./media/run-python-file.png)
+
+This will open a new tab over the `Terminal` panel. You will also see a new panel that allows you to toggle between multiple terminals
+
+![screenshot of running file terminal](./media/codespace-run-file-output.png)
+
+6. Commit and push your changes
+
+VS Code has git integrated into it and, of course, since your workspace is already checked out from git, it already knows how to connect to your repo so this should be pretty easy.
+
+In the far left side, next to the `Explorer` panel, find the little graph symbol, which will open the SCM (Source Code Management) panel.
+
+![screenshot of scm panel](./media/codespace-scm.png)
+
+Remember with GitHub Desktop changes you had to deal with staging changes ("git add"), commits, and pushing? The same workflow will be followed here. Click on the "+" icon next to the file that needs to be added to stage it.
+
+![screenshot of scm stage](./media/scm-stage-changes.png)
+
+Next, make a commit:
+
+![screenshot of commit](./media/scm-commit-staged.png)
+
+That creates the commit locally (on the codespace workspace) but it still isn't pushed to the remote repo. So finally, push those to the remote (i.e., github.com)
+
+![screenshot of push](./media/git-push.png)
+
+
+
 
