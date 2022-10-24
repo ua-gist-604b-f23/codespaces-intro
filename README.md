@@ -27,7 +27,7 @@ Note that this will create a new `Codespace` VM environment and associate it wit
 
 When you do, it will open another browser tab where your environment will be set up. You can interact with this environment through this browser tab. It will not live long if you are not working with it actively so it will be up to you to save any work you have before letting it go idle for too long. When it has finally loaded it will look like this:
 
-![screenshot of running vscode workspace](./media/codespace_created.png)
+![screenshot of running vscode workspace](./media/codespace-created.png)
 
 This environment is running [Microsoft Visual Studio Code](https://code.visualstudio.com/). This is an Integrated Development Environment, or IDE. It is [open sourced under the MIT license](https://github.com/microsoft/vscode). An IDE is a glorified text editor with built-in tools optimized for editing and interacting with programs. You may be familiar with another IDE, `PyCharm`, from another class.
 
