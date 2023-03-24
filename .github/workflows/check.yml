@@ -2,7 +2,7 @@ name: Check for required files
 
 on:
   push:
-    branches: [ pandas ]
+    branches: [ assignment ]
 
 jobs:
   build:
